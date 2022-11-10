@@ -12,6 +12,26 @@
 
 button {
   user-select: none;
+  padding: 0.15rem 1rem;
+  max-width: max-content;
+  /* min-width: 8rem; */
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #ddd;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.35rem;
+  background-color: #ffffff20;
+  transition: background-color 100ms;
+}
+
+button:hover {
+  background-color: #ffffff30;
+}
+
+span {
+  color: #eee;
+  line-height: 1rem;
 }
 
 #root {
@@ -31,8 +51,10 @@ button {
 .container {
   flex-grow: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1.5rem;
+  padding: 1rem;
 }
 
 .page {
