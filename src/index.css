@@ -8,14 +8,16 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
+  font-weight: 500;
 }
 
 button {
   user-select: none;
-  padding: 0.15rem 1rem;
+  padding: 0.45rem 1rem;
   max-width: max-content;
-  /* min-width: 8rem; */
-  font-size: 0.87rem;
+  min-width: 11.75rem;
+  font-size: 0.9rem;
+  line-height: 100%;
   font-weight: 600;
   color: #ddd;
   cursor: pointer;
@@ -27,6 +29,87 @@ button {
 
 button:hover {
   background-color: #ffffff30;
+}
+
+input {
+  padding: 0.35rem 0.5rem;
+  max-width: min-content;
+  min-width: 10rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #ddd;
+  border: none;
+  outline: none;
+  border-radius: 0.35rem;
+  background-color: #ffffff20;
+  transition: background-color 100ms;
+}
+
+input:hover {
+  background-color: #ffffff30;
+}
+
+.dropdown {
+  position: relative;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: max-content;
+  min-width: 11.75rem;
+  padding: 0.5rem;
+  font-size: 0.87rem;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 0.35rem;
+  background-color: #ffffff20;
+  transition: background-color 100ms;
+}
+
+.dropdown:hover {
+  background-color: #ffffff30;
+}
+
+.dropdown svg {
+  position: absolute;
+  right: 0.5rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  transition: rotate 300ms;
+}
+
+.dropdown svg.spin {
+  rotate: 180deg;
+}
+
+.dropdown .children {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0.15rem;
+  border-radius: 0.35rem;
+  /* border: 1px solid black; */
+  background-color: #222;
+  box-shadow: 0 0 0.5rem #00000020;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 100ms;
+}
+
+.dropdown .children * {
+  width: 100%;
+  min-width: 100%;
+}
+
+.dropdown .children.dActive {
+  opacity: 1;
+  pointer-events: all;
 }
 
 span {

@@ -31,11 +31,13 @@
   align-items: center;
   justify-content: center;
   width: 1.75rem;
+  min-width: 1.75rem;
   height: 100%;
   color: #555;
   cursor: pointer;
   outline: none;
   border: none;
+  border-radius: 0;
   background-color: #00000000;
   transition: background-color 100ms linear, color 100ms linear;
 }
