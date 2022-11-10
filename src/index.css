@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+button {
+  user-select: none;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #121212;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+
+.page {
+  flex-grow: 1;
+  max-width: calc(100% - 11rem);
+  display: flex;
+  flex-direction: column;
+  margin-left: 11rem;
+  background-color: #ffffff05;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.grad0 {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+.grad1 {
+  background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
+}
+.grad2 {
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+}
+.grad3 {
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+.grad4 {
+  background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+.grad5 {
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+.grad6 {
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+}
+.grad7 {
+  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+.grad8 {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+.grad9 {
+  background-image: linear-gradient(to top, #f6d365 0%, #fda085 100%);
+}
+.grad10 {
+  background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+}
