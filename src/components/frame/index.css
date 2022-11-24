@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   width: 100vw;
-  min-height: 1.5rem;
+  min-height: var(--frame-height);
   user-select: none;
   background-color: #212121;
   box-shadow: 0 0rem 1rem #00000010;

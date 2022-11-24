@@ -8,10 +8,8 @@ import Item from "./item";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Item text="Home" />
-      <Item text="Library" />
-      {/* <Item icon={<HiBeaker />} text='Premium' /> */}
-      <Item text="Settings" bottom={true} />
+      <Item text="info" path="/" />
+      {/* <Item text="Settings" bottom={true} /> */}
     </div>
   );
 };

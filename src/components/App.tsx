@@ -25,24 +25,44 @@ const App = () => {
   return (
     <>
       <Frame />
-      <div className="container">
-        {/* <Sidebar /> */}
-        <Routes></Routes>
-        <span>
-          {size.width} x {size.height}
-        </span>
-        <span>Tauri Version {tauriVersion}</span>
-        <div className="dropdown" onClick={() => setDropdownActive((x) => !x)}>
-          <span className="dropdown-title">{dropdownValue}</span>
-          <HiChevronDown className={dropdownActive ? "spin" : ""} />
-          <div className={`children ${dropdownActive && "dActive"}`}>
-            <button onClick={() => setDropdownValue("child 1")}>child 1</button>
-            <button onClick={() => setDropdownValue("child 2")}>child 2</button>
-            <button onClick={() => setDropdownValue("child 3")}>child 3</button>
+      <div className="flex-row">
+        <Sidebar />
+        <div className="container">
+          <Routes></Routes>
+          <span>
+            {size.width} x {size.height}
+          </span>
+          <span>Tauri Version {tauriVersion}</span>
+          <div>
+            <h3 className="input-header">INPUT HEADER</h3>
+            <div
+              className="dropdown"
+              onClick={() => setDropdownActive((x) => !x)}
+            >
+              <span className="dropdown-title">{dropdownValue}</span>
+              <HiChevronDown className={dropdownActive ? "spin" : ""} />
+              <div className={`children ${dropdownActive && "dActive"}`}>
+                <button onClick={() => setDropdownValue("child 1")}>
+                  child 1
+                </button>
+                <button onClick={() => setDropdownValue("child 2")}>
+                  child 2
+                </button>
+                <button onClick={() => setDropdownValue("child 3")}>
+                  child 3
+                </button>
+              </div>
+            </div>
+          </div>
+          <button>example button</button>
+          <button className="submit">submit</button>
+          <button className="cancel">cancel</button>
+          <input type="text" placeholder="input " spellCheck={false} />
+          <div className="divider"></div>
+          <div className="divider text">
+            <span>DIVIDER WITH TEXT</span>
           </div>
         </div>
-        <button>example button</button>
-        <input type="text" placeholder="input " spellCheck={false} />
       </div>
     </>
   );

@@ -1,3 +1,11 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: var(--frame-height);
+  height: calc(100vh - var(--frame-height));
+  width: 100%;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -7,7 +15,7 @@
   min-width: 12rem;
   height: 100%;
   user-select: none;
-  background-color: #121212;
+  background-color: var(--bg-secondary);
 }
 
 .sidebar-item {
@@ -15,7 +23,7 @@
   flex-direction: row;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.25rem;
+  padding: 0.4rem 0.25rem;
   width: 100%;
   color: #888;
   cursor: pointer;

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 type ItemProps = {
   text: string;
+  path: string;
   bottom?: boolean;
 };
 
@@ -11,10 +12,9 @@ const Item = (props: ItemProps) => {
 
   return (
     <div
-      onClick={() => navigate(`/${props.text.toLowerCase()}`)}
+      onClick={() => navigate(props.path)}
       className={`sidebar-item ${props.bottom && "bottom"} ${
-        location.pathname.split("/")[1] === `${props.text.toLowerCase()}` &&
-        "active"
+        location.pathname === props.path && "active"
       }`}
     >
       <span>{props.text}</span>

@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
 
-import linkedFiles from './slices/linkedFiles';
+import app from "./slices/app";
 
 export default configureStore({
-    reducer: { linkedFiles },
+  reducer: { app },
 });
