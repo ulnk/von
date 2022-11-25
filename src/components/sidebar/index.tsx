@@ -8,7 +8,7 @@ import Item from "./item";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Item text="info" path="/" />
+      <Item text="Steam Playtime" path="/" />
       {/* <Item text="Settings" bottom={true} /> */}
     </div>
   );

@@ -21,8 +21,8 @@
 
 button {
   user-select: none;
-  padding: 0.45rem 1rem;
-  max-width: max-content;
+  padding: 0.5rem 1rem;
+  /* max-width: max-content; */
   min-width: 11.75rem;
   font-size: 0.9rem;
   line-height: 100%;
@@ -57,7 +57,7 @@ button.cancel:hover {
 
 input {
   padding: 0.35rem 0.5rem;
-  max-width: min-content;
+  /* max-width: min-content;s */
   min-width: 10rem;
   font-size: 0.87rem;
   font-weight: 600;
@@ -71,6 +71,16 @@ input {
 
 input:hover {
   background-color: #ffffff30;
+}
+
+input.extend {
+  width: 100%;
+}
+
+div:has(input) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .dropdown {
@@ -201,6 +211,16 @@ span {
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.7rem;
+  width: 18rem;
+  border-radius: 0.35rem;
+  background-color: var(--bg-secondary);
 }
 
 *::-webkit-scrollbar {

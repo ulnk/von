@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const fetchState = (): AppState => {
-  const localState = localStorage.getItem("appState");
+  const localState = localStorage.getItem("state.app");
   if (localState) return JSON.parse(localState);
 
   return [];
@@ -10,7 +10,7 @@ const fetchState = (): AppState => {
 export const appSlice = createSlice({
   name: "app",
   initialState: {
-    all: fetchState(),
+    ...fetchState(),
   },
   reducers: {},
 });
